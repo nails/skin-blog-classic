@@ -1,33 +1,72 @@
 <ul class="sidebar <?=BS_COL_MD_3?> <?=BS_COL_MD_PULL_9?> list-unstyled">
 <?php
 
-	if ( app_setting( 'sidebar_latest_posts', 'blog' ) && $widget->latest_posts ) :
+	if ( app_setting( 'sidebar_latest_posts', 'blog' ) && ! empty( $widget->latest_posts ) ) :
 
 		echo '<li class="widget latest-posts clearfix">';
-			echo $widget->latest_posts;
+
+			echo '<h3>Latest Posts</h3>';
+			echo '<ul class="latest-posts">';
+			foreach( $widget->latest_posts AS $item ) :
+
+				echo '<li>';
+					echo anchor( $item->url, $item->title );
+					echo '<br />';
+					echo '<small class="meta">';
+						echo 'Published ' . user_datetime( $item->published );
+					echo '</small>';
+				echo '</li>';
+
+			endforeach;
+			echo '</ul>';
 			echo '<hr />';
+
 		echo '</li>';
 
 	endif;
 
 	// --------------------------------------------------------------------------
 
-	if ( app_setting( 'categories_enabled', 'blog' ) && app_setting( 'sidebar_categories', 'blog' ) && $widget->categories ) :
+	if ( app_setting( 'categories_enabled', 'blog' ) && app_setting( 'sidebar_categories', 'blog' ) && ! empty( $widget->categories ) ) :
 
 		echo '<li class="widget categories clearfix">';
-			echo $widget->categories;
+
+			echo '<h3>Categories</h3>';
+			echo '<ul class="categories">';
+			foreach( $widget->categories AS $item ) :
+
+				echo '<li>';
+					echo anchor( $item->url, $item->label );
+					echo $item->post_count ? ' (' . $item->post_count . ')' : '';
+				echo '</li>';
+
+			endforeach;
+			echo '</ul>';
 			echo '<hr />';
+
 		echo '</li>';
 
 	endif;
 
 	// --------------------------------------------------------------------------
 
-	if ( app_setting( 'tags_enabled', 'blog' ) && app_setting( 'sidebar_tags', 'blog' ) && $widget->tags ) :
+	if ( app_setting( 'tags_enabled', 'blog' ) && app_setting( 'sidebar_tags', 'blog' ) && ! empty( $widget->tags ) ) :
 
 		echo '<li class="widget tags clearfix">';
-			echo $widget->tags;
+
+			echo '<h3>Tags</h3>';
+			echo '<ul class="tags">';
+			foreach( $widget->tags AS $item ) :
+
+				echo '<li>';
+					echo anchor( $item->url, $item->label );
+					echo $item->post_count ? ' (' . $item->post_count . ')' : '';
+				echo '</li>';
+
+			endforeach;
+			echo '</ul>';
 			echo '<hr />';
+
 		echo '</li>';
 
 	endif;
@@ -39,10 +78,10 @@
 
 		foreach ( $post->associations AS $assoc ) :
 
-			if ( app_setting( 'sidebar_association_' . $assoc->slug, 'blog' ) && $assoc->current ) :
+			if ( app_setting( 'sidebar_association_' . $assoc->slug, 'blog' ) && ! empty( $assoc->current ) ) :
 
 				echo '<li class="widget associations association-' . $assoc->slug . ' clearfix">';
-				echo '<h5>' . $assoc->widget->title . '</h5>';
+				echo '<h3>' . $assoc->widget->title . '</h3>';
 
 				echo '<ul>';
 				foreach( $assoc->current AS $item_index => $current ) :
@@ -74,11 +113,26 @@
 
 	endif;
 
-	if ( app_setting( 'sidebar_popular_posts', 'blog' ) && $widget->popular_posts ) :
+	if ( app_setting( 'sidebar_popular_posts', 'blog' ) && ! empty( $widget->popular_posts ) ) :
 
 		echo '<li class="widget popular-posts clearfix">';
-			echo $widget->popular_posts;
+
+			echo '<h3>Popular Posts</h3>';
+			echo '<ul class="popular-posts">';
+			foreach( $widget->popular_posts AS $item ) :
+
+				echo '<li>';
+					echo anchor( $item->url, $item->title );
+					echo '<br />';
+					echo '<small class="meta">';
+						echo 'Published ' . user_datetime( $item->published );
+					echo '</small>';
+				echo '</li>';
+
+			endforeach;
+			echo '</ul>';
 			echo '<hr />';
+
 		echo '</li>';
 
 	endif;
