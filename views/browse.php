@@ -9,7 +9,7 @@
 	if ( ! empty( $archive_title ) ) :
 
 		echo '<li class="archive-title">';
-			$this->load->view( $skin->path . '_components/browse_archive_title' );
+			$this->load->view( $skin->path . 'views/_components/browse_archive_title' );
 		echo '</li>';
 
 	endif;
@@ -22,7 +22,7 @@
 		foreach ( $posts AS $post ) :
 
 			echo '<li class="post clearfix">';
-				$this->load->view( $skin->path . '_components/browse', array( 'post' => &$post ) );
+				$this->load->view( $skin->path . 'views/_components/browse', array( 'post' => &$post ) );
 			echo '</li>';
 
 		endforeach;
@@ -38,14 +38,14 @@
 	// --------------------------------------------------------------------------
 
 	//	Pagination
-	$this->load->view( $skin->path . '_components/browse_pagination' );
+	$this->load->view( $skin->path . 'views/_components/browse_pagination' );
 
 	echo '</ul>';
 
 	// --------------------------------------------------------------------------
 
 	//	Load Sidebar
-	$this->load->view( $skin->path . '_components/sidebar');
+	$this->load->view( $skin->path . 'views/_components/sidebar');
 
 ?>
 </div>
