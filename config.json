@@ -1,0 +1,19 @@
+{
+	"name" : "Classic",
+	"description" : "This is a bare bones blog skin levereging Twitter Bootstrap.",
+	"keywords": ["Nails","Classic","Twitter Bootstrap","Bootstrap"],
+	"homepage": "http://skins.nailsapp.co.uk/blog/classic",
+	"license" :"MIT",
+	"version" : "0.1.0",
+	"authors" : [
+		{
+			"name": "Pablo de la Pena",
+			"email": "p@shedcollective.org",
+			"homepage": "http://shedcollective.org",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "hello@shedcollective.org"
+	}
+}
