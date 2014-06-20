@@ -15,8 +15,5 @@
 	"support": {
 		"email": "hello@shedcollective.org"
 	},
-	"require":
-	{
-		"nailsapp/common": "dev-master"
-	}
+	"require":{}
 }
