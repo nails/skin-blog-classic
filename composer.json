@@ -17,6 +17,6 @@
 	},
 	"require":
 	{
-		"shed/nails": "dev-develop"
+		"nailsapp/common": "dev-master"
 	}
 }
