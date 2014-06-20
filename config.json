@@ -1,8 +1,8 @@
 {
 	"name" : "Classic",
 	"description" : "This is a bare bones blog skin levereging Twitter Bootstrap.",
-	"keywords": ["Nails","Classic","Twitter Bootstrap","Bootstrap"],
-	"homepage": "http://skins.nailsapp.co.uk/blog/classic",
+	"keywords": ["Nails","Twitter Bootstrap","Bootstrap"],
+	"homepage": "http://nailsapp.co.uk/skins/blog/classic",
 	"license" :"MIT",
 	"version" : "0.1.1",
 	"authors" : [
