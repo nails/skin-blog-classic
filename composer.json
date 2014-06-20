@@ -1,7 +1,7 @@
 {
-	"name": "shed/nails-classic-blog-skin",
-	"keywords": ["Nails","Classic","Twitter Bootstrap","Bootstrap"],
-	"homepage": "http://skins.nailsapp.co.uk/blog/classic",
+	"name": "nailsapp/skin-blog-classic",
+	"keywords": ["Nails","Twitter Bootstrap","Bootstrap"],
+	"homepage": "http://nailsapp.co.uk/skins/blog/classic",
 	"description": "The Classic skin for the Nails Blog module",
 	"license":"MIT",
 	"authors": [
