@@ -2,6 +2,14 @@
 
 ---
 
+## Version 0.1.2
+
+Release date: 20th June 2014
+
+- Minor updates to composer.json and config.json
+- Added LICENSE and README.md
+- Renamed changelog.md » CHANGELOG.md
+
 ## Version 0.1.1
 
 Release date: 20th June 2014
