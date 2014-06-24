@@ -14,6 +14,14 @@
 
 	endif;
 
+	if ( ! empty( $archive_description ) ) :
+
+		echo '<li class="archive-description">';
+			$this->load->view( $skin->path . 'views/_components/browse_archive_description' );
+		echo '</li>';
+
+	endif;
+
 	// --------------------------------------------------------------------------
 
 	//	Render Posts
