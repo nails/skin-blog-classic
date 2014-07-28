@@ -7,7 +7,7 @@
 		foreach ( $post->categories AS $cat ) :
 
 			echo '<li class="category">';
-			echo anchor( $cat->url, $cat->label );
+				echo anchor( $cat->url, '<span class="badge">' . $cat->label . '</span>' );
 			echo '</li>';
 
 		endforeach;
