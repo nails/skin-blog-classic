@@ -1,4 +1,4 @@
-<div class="blog single container">
+<div class="nails-skin-blog-classic single">
 <?php
 
 	echo '<ul class="posts ' . BS_COL_MD_9 . ' ' . BS_COL_MD_PUSH_3 . ' list-unstyled">';
