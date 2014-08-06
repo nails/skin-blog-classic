@@ -143,7 +143,7 @@
 	if ( app_setting( 'rss_enabled', 'blog' ) ) :
 
 		echo '<li class="text-center">';
-			echo anchor( app_setting( 'url', 'blog' ) . 'rss', '<span class="ion-social-rss"></span>', 'title="Subscribe via RSS"' );
+			echo anchor( app_setting( 'url', 'blog' ) . 'rss', '<span class="fa fa-rss"></span>', 'title="Subscribe via RSS"' );
 		echo '<li>';
 
 	endif;
