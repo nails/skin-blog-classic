@@ -58,6 +58,15 @@
 
 	// --------------------------------------------------------------------------
 
+	//	Associated content
+	if ( ! empty( $post->associations ) ) :
+
+		$this->load->view( $skin->path . 'views/_components/single_associations' );
+
+	endif;
+
+	// --------------------------------------------------------------------------
+
 	//	Post comments
 	if ( app_setting( 'comments_enabled', 'blog' ) ) :
 

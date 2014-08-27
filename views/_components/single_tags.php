@@ -7,7 +7,7 @@
 		foreach ( $post->tags AS $tag ) :
 
 			echo '<li class="tag">';
-				echo anchor( $tag->url, '<span class="badge">' . $tag->label . '</span>' );
+				echo '<span class="badge">' . anchor( $tag->url, $tag->label ) . '</span>';
 			echo '</li>';
 
 		endforeach;
