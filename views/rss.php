@@ -17,7 +17,7 @@
 		<language>en-UK</language>
 			<sy:updatePeriod>hourly</sy:updatePeriod>
 			<sy:updateFrequency>1</sy:updateFrequency>
-		<generator>http://nailsapp.co.uk/version/<?=NAILS_VERSION?></generator>
+		<generator>http://nailsapp.co.uk</generator>
 
 		<?php foreach( $posts AS $post ) : ?>
 
