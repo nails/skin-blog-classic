@@ -29,7 +29,7 @@
 	// --------------------------------------------------------------------------
 
 	//	Post Social Tools
-	if ( app_setting( 'social_enabled', 'blog' ) ) :
+	if ( app_setting( 'social_enabled', 'blog-' . $blog_id ) ) :
 
 		$this->load->view( $skin->path . 'views/_components/single_social' );
 
@@ -38,19 +38,19 @@
 	// --------------------------------------------------------------------------
 
 	//	Categories & Tags
-	if ( ( app_setting( 'categories_enabled', 'blog' ) && $post->categories ) || ( app_setting( 'tags_enabled', 'blog' ) && $post->tags ) ) :
+	if ( ( app_setting( 'categories_enabled', 'blog-' . $blog_id ) && $post->categories ) || ( app_setting( 'tags_enabled', 'blog-' . $blog_id ) && $post->tags ) ) :
 
 		echo '<hr />';
 
 	endif;
 
-	if ( app_setting( 'categories_enabled', 'blog' ) && $post->categories ) :
+	if ( app_setting( 'categories_enabled', 'blog-' . $blog_id ) && $post->categories ) :
 
 		$this->load->view( $skin->path . 'views/_components/single_categories' );
 
 	endif;
 
-	if ( app_setting( 'tags_enabled', 'blog' ) && $post->tags ) :
+	if ( app_setting( 'tags_enabled', 'blog-' . $blog_id ) && $post->tags ) :
 
 		$this->load->view( $skin->path . 'views/_components/single_tags' );
 
@@ -68,7 +68,7 @@
 	// --------------------------------------------------------------------------
 
 	//	Post comments
-	if ( app_setting( 'comments_enabled', 'blog' ) ) :
+	if ( app_setting( 'comments_enabled', 'blog-' . $blog_id ) ) :
 
 		$this->load->view( $skin->path . 'views/_components/single_comments' );
 
