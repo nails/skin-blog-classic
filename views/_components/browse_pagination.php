@@ -3,12 +3,27 @@
     $this->load->library('pagination');
 
     $config                     = array();
-    $config['base_url']         = $blog_url;
     $config['total_rows']       = $pagination->total;
     $config['per_page']         = $pagination->per_page;
     $config['use_page_numbers'] = true;
     $config['use_rsegment']     = true;
-    $config['uri_segment']      = 3;
+
+    if ($isIndex) {
+
+        $config['base_url']    = $blog_url;
+        $config['uri_segment'] = 3;
+
+    } elseif ($isCategory) {
+
+        $config['base_url']    = $blog_url . 'category/' . $category->slug . '/';
+        $config['uri_segment'] = 5;
+
+    } elseif ($isTag) {
+
+        $config['base_url']    = $blog_url . 'tag/' . $tag->slug . '/';
+        $config['uri_segment'] = 5;
+
+    }
 
     $config['full_tag_open']    = '<li class="text-center"><ul class="pagination">';
     $config['full_tag_close']   = '</ul></li>';
