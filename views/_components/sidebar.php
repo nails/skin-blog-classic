@@ -1,4 +1,4 @@
-<ul class="sidebar <?=BS_COL_MD_3?> <?=BS_COL_MD_PULL_9?> list-unstyled">
+<ul class="sidebar col-md-3 col-md-pull-9 list-unstyled">
 <?php
 
 	if ( app_setting( 'sidebar_latest_posts', 'blog-' . $blog_id ) && ! empty( $widget->latest_posts ) ) :

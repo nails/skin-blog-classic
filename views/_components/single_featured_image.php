@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="<?=BS_COL_MD_12?>">
+	<div class="col-md-12">
 	<?php
 
 		echo '<a href="' . cdn_serve( $post->image_id ) . '" class="fancybox" target="_blank">';
