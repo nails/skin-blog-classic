@@ -14,7 +14,7 @@
 
 					else :
 
-						foreach( $assoc->current AS $item_index => $current ) :
+						foreach ( $assoc->current AS $item_index => $current ) :
 
 							/**
 							 * If a callback has been defined and is callable then use that,
