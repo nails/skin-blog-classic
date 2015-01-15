@@ -29,7 +29,7 @@
 
 		echo '<hr />';
 		echo '<div class="social-likes ' . $_layout . '" ' . $_counters . ' data-url="' . $post->url . '" data-single-title="' . $_single_title . '" data-title="' . $post->title . '">';
-		foreach ( $_enabled AS $enabled ) :
+		foreach ( $_enabled as $enabled ) :
 
 			echo $enabled;
 

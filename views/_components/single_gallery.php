@@ -5,7 +5,7 @@
 
 		echo '<div class="gallery row">';
 
-		foreach ( $post->gallery AS $slide ) :
+		foreach ( $post->gallery as $slide ) :
 
 			echo '<div class="col-sm-3 col-xs-4" style="margin-bottom:1.25em;">';
 

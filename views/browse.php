@@ -27,7 +27,7 @@
 	//	Render Posts
 	if ( $posts ) :
 
-		foreach ( $posts AS $post ) :
+		foreach ( $posts as $post ) :
 
 			echo '<li class="post clearfix">';
 				$this->load->view( $skin->path . 'views/_components/browse', array( 'post' => &$post ) );

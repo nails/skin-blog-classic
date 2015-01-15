@@ -1,6 +1,6 @@
 <?php
 
-	foreach ( $post->associations AS $index => $assoc ) :
+	foreach ( $post->associations as $index => $assoc ) :
 
 		if ( ! empty( $assoc->current ) ) :
 
@@ -14,7 +14,7 @@
 
 					else :
 
-						foreach ( $assoc->current AS $item_index => $current ) :
+						foreach ( $assoc->current as $item_index => $current ) :
 
 							/**
 							 * If a callback has been defined and is callable then use that,

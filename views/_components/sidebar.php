@@ -7,7 +7,7 @@
 
 			echo '<h3>Latest Posts</h3>';
 			echo '<ul class="latest-posts">';
-			foreach ( $widget->latest_posts AS $item ) :
+			foreach ( $widget->latest_posts as $item ) :
 
 				echo '<li>';
 					echo anchor( $item->url, $item->title );
@@ -33,7 +33,7 @@
 
 			echo '<h3>Categories</h3>';
 			echo '<ul class="categories">';
-			foreach ( $widget->categories AS $item ) :
+			foreach ( $widget->categories as $item ) :
 
 				echo '<li>';
 					echo anchor( $item->url, $item->label );
@@ -56,7 +56,7 @@
 
 			echo '<h3>Tags</h3>';
 			echo '<ul class="tags">';
-			foreach ( $widget->tags AS $item ) :
+			foreach ( $widget->tags as $item ) :
 
 				echo '<li>';
 					echo anchor( $item->url, $item->label );
@@ -76,7 +76,7 @@
 	//	Post associations
 	if ( isset( $post->associations ) && $post->associations ) :
 
-		foreach ( $post->associations AS $assoc ) :
+		foreach ( $post->associations as $assoc ) :
 
 			if ( app_setting( 'sidebar_association_' . $assoc->slug, 'blog-' . $blog_id ) && ! empty( $assoc->current ) ) :
 
@@ -84,7 +84,7 @@
 				echo '<h3>' . $assoc->widget->title . '</h3>';
 
 				echo '<ul>';
-				foreach ( $assoc->current AS $item_index => $current ) :
+				foreach ( $assoc->current as $item_index => $current ) :
 
 					//	If a callback has been defined and is callable then use that,
 					//	otherwise a simple text label will do nicely
@@ -119,7 +119,7 @@
 
 			echo '<h3>Popular Posts</h3>';
 			echo '<ul class="popular-posts">';
-			foreach ( $widget->popular_posts AS $item ) :
+			foreach ( $widget->popular_posts as $item ) :
 
 				echo '<li>';
 					echo anchor( $item->url, $item->title );
