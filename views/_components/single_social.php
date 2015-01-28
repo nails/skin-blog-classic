@@ -9,7 +9,7 @@
 	// --------------------------------------------------------------------------
 
 	//	Layout
-	switch( app_setting( 'social_layout', 'blog-' . $blog_id ) ) :
+	switch ( app_setting( 'social_layout', 'blog-' . $blog_id ) ) :
 
 		case 'HORIZONTAL' :	$_layout = '';						break;
 		case 'VERTICAL' :	$_layout = 'social-likes_vertical';	break;
