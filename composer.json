@@ -1,28 +1,36 @@
 {
-	"name": "nailsapp/blog-skin-classic",
-	"keywords":
-	[
-		"Nails",
-		"Twitter Bootstrap",
-		"Bootstrap"
-	],
-	"homepage": "http://nailsapp.co.uk/blog/skin/classic",
-	"description": "The Classic skin for the Nails Blog module",
-	"license": "MIT",
-	"authors":
-	[
-		{
-			"name": "Pablo de la Pena",
-			"email": "p@shedcollective.org",
-			"homepage": "http://shedcollective.org",
-			"role": "Developer"
-		}
-	],
-	"support":
-	{
-		"email": "hello@shedcollective.org"
-	},
-	"require":
-	{
-	}
+    "name": "nailsapp/blog-skin-classic",
+    "keywords":
+    [
+        "Nails",
+        "Twitter Bootstrap",
+        "Bootstrap"
+    ],
+    "homepage": "http://nailsapp.co.uk/blog/skin/classic",
+    "description": "The Classic skin for the Nails Blog module",
+    "license": "MIT",
+    "authors":
+    [
+        {
+            "name": "Pablo de la Pena",
+            "email": "p@shedcollective.org",
+            "homepage": "http://shedcollective.org",
+            "role": "Developer"
+        }
+    ],
+    "support":
+    {
+        "email": "hello@shedcollective.org"
+    },
+    "require":
+    {
+    },
+    "extra":
+    {
+        "nails" :
+        {
+            "type": "skin",
+            "subtype": "blog"
+        }
+    }
 }
