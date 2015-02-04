@@ -13,7 +13,7 @@
 					echo anchor( $item->url, $item->title );
 					echo '<br />';
 					echo '<small class="meta">';
-						echo 'Published ' . user_datetime( $item->published );
+						echo 'Published ' . userDatetime( $item->published );
 					echo '</small>';
 				echo '</li>';
 
@@ -125,7 +125,7 @@
 					echo anchor( $item->url, $item->title );
 					echo '<br />';
 					echo '<small class="meta">';
-						echo 'Published ' . user_datetime( $item->published );
+						echo 'Published ' . userDatetime( $item->published );
 					echo '</small>';
 				echo '</li>';
 
