@@ -5,7 +5,7 @@
 
 	if ( $post->is_published ) :
 
-		echo 'Published ' . userDatetime( $post->published ). ', ';
+		echo 'Published ' . toUserDatetime( $post->published ). ', ';
 		echo 'by ' . $post->author->first_name . ' ' . $post->author->last_name;
 
 	else :
