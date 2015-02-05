@@ -1,7 +1,7 @@
 <ul class="sidebar col-md-3 col-md-pull-9 list-unstyled">
 <?php
 
-	if ( app_setting( 'sidebar_latest_posts', 'blog-' . $blog_id ) && ! empty( $widget->latest_posts ) ) :
+	if ( app_setting( 'sidebar_latest_posts', 'blog-' . $blog->id ) && ! empty( $widget->latest_posts ) ) :
 
 		echo '<li class="widget latest-posts clearfix">';
 
@@ -27,7 +27,7 @@
 
 	// --------------------------------------------------------------------------
 
-	if ( app_setting( 'categories_enabled', 'blog-' . $blog_id ) && app_setting( 'sidebar_categories', 'blog-' . $blog_id ) && ! empty( $widget->categories ) ) :
+	if ( app_setting( 'categories_enabled', 'blog-' . $blog->id ) && app_setting( 'sidebar_categories', 'blog-' . $blog->id ) && ! empty( $widget->categories ) ) :
 
 		echo '<li class="widget categories clearfix">';
 
@@ -50,7 +50,7 @@
 
 	// --------------------------------------------------------------------------
 
-	if ( app_setting( 'tags_enabled', 'blog-' . $blog_id ) && app_setting( 'sidebar_tags', 'blog-' . $blog_id ) && ! empty( $widget->tags ) ) :
+	if ( app_setting( 'tags_enabled', 'blog-' . $blog->id ) && app_setting( 'sidebar_tags', 'blog-' . $blog->id ) && ! empty( $widget->tags ) ) :
 
 		echo '<li class="widget tags clearfix">';
 
@@ -78,7 +78,7 @@
 
 		foreach ( $post->associations as $assoc ) :
 
-			if ( app_setting( 'sidebar_association_' . $assoc->slug, 'blog-' . $blog_id ) && ! empty( $assoc->current ) ) :
+			if ( app_setting( 'sidebar_association_' . $assoc->slug, 'blog-' . $blog->id ) && ! empty( $assoc->current ) ) :
 
 				echo '<li class="widget associations association-' . $assoc->slug . ' clearfix">';
 				echo '<h3>' . $assoc->widget->title . '</h3>';
@@ -113,7 +113,7 @@
 
 	endif;
 
-	if ( app_setting( 'sidebar_popular_posts', 'blog-' . $blog_id ) && ! empty( $widget->popular_posts ) ) :
+	if ( app_setting( 'sidebar_popular_posts', 'blog-' . $blog->id ) && ! empty( $widget->popular_posts ) ) :
 
 		echo '<li class="widget popular-posts clearfix">';
 
@@ -140,10 +140,10 @@
 	// --------------------------------------------------------------------------
 
 	//	RSS
-	if ( app_setting( 'rss_enabled', 'blog-' . $blog_id ) ) :
+	if ( app_setting( 'rss_enabled', 'blog-' . $blog->id ) ) :
 
 		echo '<li class="text-center">';
-			echo anchor( app_setting( 'url', 'blog-' . $blog_id ) . 'rss', '<b class="fa fa-rss"></b> RSS', 'title="Subscribe via RSS"' );
+			echo anchor( app_setting( 'url', 'blog-' . $blog->id ) . 'rss', '<b class="fa fa-rss"></b> RSS', 'title="Subscribe via RSS"' );
 		echo '<li>';
 
 	endif;

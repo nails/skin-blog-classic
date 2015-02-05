@@ -10,17 +10,17 @@
 
     if ($isIndex) {
 
-        $config['base_url']    = $blog_url;
+        $config['base_url']    = $blog->url;
         $config['uri_segment'] = 3;
 
     } elseif ($isCategory) {
 
-        $config['base_url']    = $blog_url . 'category/' . $category->slug . '/';
+        $config['base_url']    = $blog->url . '/category/' . $category->slug . '/';
         $config['uri_segment'] = 5;
 
     } elseif ($isTag) {
 
-        $config['base_url']    = $blog_url . 'tag/' . $tag->slug . '/';
+        $config['base_url']    = $blog->url . '/tag/' . $tag->slug . '/';
         $config['uri_segment'] = 5;
 
     }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>';?>
 <rss version="2.0"
     xmlns:content="http://purl.org/rss/1.0/modules/content/"
     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
@@ -7,12 +7,11 @@
     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
     >
-
     <channel>
-        <title><?=htmlentities(APP_NAME)?></title>
-        <atom:link href="<?=site_url(app_setting('url', 'blog-' . $blog_id) . 'rss')?>" rel="self" type="application/rss+xml" />
+        <title><?=htmlentities($blog->label)?></title>
+        <atom:link href="<?=site_url(app_setting('url', 'blog-' . $blog->id) . 'rss')?>" rel="self" type="application/rss+xml" />
         <link><?=site_url()?></link>
-        <description><?=htmlentities(app_setting('description', 'blog-' . $blog_id))?></description>
+        <description><?=htmlentities($blog->description)?></description>
         <lastBuildDate>Sun, 13 Apr 2014 19:49:30 +0000</lastBuildDate>
         <language>en-UK</language>
             <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -20,14 +19,14 @@
         <generator>http://nailsapp.co.uk</generator>
         <?php
 
-        foreach ($posts as $post) :
+        foreach ($posts as $post) {
 
             ?>
             <item>
                 <title><?=htmlentities($post->title)?></title>
                 <link><?=$post->url?></link>
-                <guid isPermaLink="false"><?=site_url(app_setting('url', 'blog-' . $blog_id) . '?id=' . $post->id)?></guid>
-                <?=app_setting('comments_enabled', 'blog-' . $blog_id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
+                <guid isPermaLink="false"><?=site_url(app_setting('url', 'blog-' . $blog->id) . '?id=' . $post->id)?></guid>
+                <?=app_setting('comments_enabled', 'blog-' . $blog->id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
                 <pubDate><?=date('r', strtotime($post->published))?></pubDate>
                 <dc:creator><![CDATA[<?=$post->author->first_name . ' ' . $post->author->last_name?>]]></dc:creator>
                 <description><![CDATA[<?=$post->excerpt?>]]></description>
@@ -45,8 +44,7 @@
                 ?>]]></content:encoded>
             </item>
             <?php
-
-        endforeach;
+        }
     ?>
     </channel>
 </rss>

@@ -1,6 +1,6 @@
 <?php
 
-    switch (app_setting('comments_engine', 'blog-' . $blog_id)) {
+    switch (app_setting('comments_engine', 'blog-' . $blog->id)) {
 
         case 'NATIVE':
 
