@@ -1,20 +1,20 @@
 <?php
 
-	foreach ( $post->associations as $index => $assoc ) :
+	foreach ($post->associations as $index => $assoc) {
 
-		if ( ! empty( $assoc->current ) ) :
+		if (!empty($assoc->current)) {
 
 			echo '<ul class="associations association-' . $index . ' list-inline list-unstyled">';
 
 				echo '<li class="title">' . $assoc->widget->label . ':</li>';
 
-					if ( isset( $assoc->widget->callback_batch ) && is_callable( $assoc->widget->callback_batch ) ) :
+					if (isset($assoc->widget->callback_batch) && is_callable($assoc->widget->callback_batch)) {
 
-						echo call_user_func( $assoc->widget->callback_batch, $assoc->current );
+						echo call_user_func($assoc->widget->callback_batch, $assoc->current);
 
-					else :
+					} else {
 
-						foreach ( $assoc->current as $item_index => $current ) :
+						foreach ($assoc->current as $item_index => $current) {
 
 							/**
 							 * If a callback has been defined and is callable then use that,
@@ -23,29 +23,29 @@
 
 							echo '<li class="item-id-' . $item_index . '">';
 
-								if ( isset( $assoc->widget->callback ) && is_callable( $assoc->widget->callback ) ) :
+								if (isset($assoc->widget->callback) && is_callable($assoc->widget->callback)) {
 
-									$_out = call_user_func( $assoc->widget->callback, $current->id, $current->label, $item_index );
+									$out = call_user_func(
+										$assoc->widget->callback,
+										$current->id,
+										$current->label,
+										$item_index
+									);
 
-								else :
+								} else {
 
-									$_out = $current->label;
+									$out = $current->label;
+								}
 
-								endif;
-
-								echo '<span class="badge">' . $_out . '</span>';
+								echo '<span class="badge">' . $out . '</span>';
 
 							echo '</li>';
-
-						endforeach;
-
-					endif;
+						}
+					}
 
 				echo '</li>';
 
 			echo '</ul>';
-
-		endif;
-
-	endforeach;
+		}
+	}
 

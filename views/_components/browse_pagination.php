@@ -10,7 +10,7 @@
 
     if ($isIndex) {
 
-        $config['base_url']    = $blog->url;
+        $config['base_url']    = $blog->url . '/';
         $config['uri_segment'] = 3;
 
     } elseif ($isCategory) {

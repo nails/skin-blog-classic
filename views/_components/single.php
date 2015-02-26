@@ -1,75 +1,67 @@
 <?php
 
-	//	Post Title
-	$this->load->view( $skin->path . 'views/_components/single_title' );
+    //  Post Title
+    $this->load->view($skin->path . 'views/_components/single_title');
 
-	// --------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
 
-	//	Post Featured Image
-	if ( $post->image_id ) :
+    //  Post Featured Image
+    if ($post->image_id) {
 
-		$this->load->view( $skin->path . 'views/_components/single_featured_image' );
+        $this->load->view($skin->path . 'views/_components/single_featured_image');
+    }
 
-	endif;
+    // --------------------------------------------------------------------------
 
-	// --------------------------------------------------------------------------
+    //  Post Gallery
+    if ($post->gallery) {
 
-	//	Post Gallery
-	if ( $post->gallery ) :
+        $this->load->view($skin->path . 'views/_components/single_gallery');
+    }
 
-		$this->load->view( $skin->path . 'views/_components/single_gallery' );
+    // --------------------------------------------------------------------------
 
-	endif;
+    //  Post Body
+    $this->load->view($skin->path . 'views/_components/single_body');
 
-	// --------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
 
-	//	Post Body
-	$this->load->view( $skin->path . 'views/_components/single_body' );
+    //  Post Social Tools
+    if (app_setting('social_enabled', 'blog-' . $blog->id)) {
 
-	// --------------------------------------------------------------------------
+        $this->load->view($skin->path . 'views/_components/single_social');
+    }
 
-	//	Post Social Tools
-	if ( app_setting( 'social_enabled', 'blog-' . $blog->id ) ) :
+    // --------------------------------------------------------------------------
 
-		$this->load->view( $skin->path . 'views/_components/single_social' );
+    //  Categories & Tags
+    if ((app_setting('categories_enabled', 'blog-' . $blog->id) && $post->categories) || (app_setting('tags_enabled', 'blog-' . $blog->id) && $post->tags)) {
 
-	endif;
+        echo '<hr />';
+    }
 
-	// --------------------------------------------------------------------------
+    if (app_setting('categories_enabled', 'blog-' . $blog->id) && $post->categories) {
 
-	//	Categories & Tags
-	if ( ( app_setting( 'categories_enabled', 'blog-' . $blog->id ) && $post->categories ) || ( app_setting( 'tags_enabled', 'blog-' . $blog->id ) && $post->tags ) ) :
+        $this->load->view($skin->path . 'views/_components/single_categories');
+    }
 
-		echo '<hr />';
+    if (app_setting('tags_enabled', 'blog-' . $blog->id) && $post->tags) {
 
-	endif;
+        $this->load->view($skin->path . 'views/_components/single_tags');
+    }
 
-	if ( app_setting( 'categories_enabled', 'blog-' . $blog->id ) && $post->categories ) :
+    // --------------------------------------------------------------------------
 
-		$this->load->view( $skin->path . 'views/_components/single_categories' );
+    //  Associated content
+    if (!empty($post->associations)) {
 
-	endif;
+        $this->load->view($skin->path . 'views/_components/single_associations');
+    }
 
-	if ( app_setting( 'tags_enabled', 'blog-' . $blog->id ) && $post->tags ) :
+    // --------------------------------------------------------------------------
 
-		$this->load->view( $skin->path . 'views/_components/single_tags' );
+    //  Post comments
+    if (app_setting('comments_enabled', 'blog-' . $blog->id)) {
 
-	endif;
-
-	// --------------------------------------------------------------------------
-
-	//	Associated content
-	if ( ! empty( $post->associations ) ) :
-
-		$this->load->view( $skin->path . 'views/_components/single_associations' );
-
-	endif;
-
-	// --------------------------------------------------------------------------
-
-	//	Post comments
-	if ( app_setting( 'comments_enabled', 'blog-' . $blog->id ) ) :
-
-		$this->load->view( $skin->path . 'views/_components/single_comments' );
-
-	endif;
+        $this->load->view($skin->path . 'views/_components/single_comments');
+    }

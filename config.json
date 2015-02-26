@@ -1,19 +1,19 @@
 {
-	"name" : "Classic",
-	"description" : "This is a bare bones blog skin levereging Twitter Bootstrap.",
-	"keywords": ["Nails","Twitter Bootstrap","Bootstrap"],
-	"homepage": "http://nailsapp.co.uk/blog/skin/classic",
-	"license" :"MIT",
-	"version" : "0.1.2",
-	"authors" : [
-		{
-			"name": "Pablo de la Pena",
-			"email": "p@shedcollective.org",
-			"homepage": "http://shedcollective.org",
-			"role": "Developer"
-		}
-	],
-	"support": {
-		"email": "hello@shedcollective.org"
-	}
+    "name": "Classic",
+    "description": "This is a bare bones blog skin levereging Twitter Bootstrap.",
+    "keywords": ["Nails","Twitter Bootstrap","Bootstrap"],
+    "homepage": "http://nailsapp.co.uk/blog/skin/classic",
+    "license":"MIT",
+    "version": "0.1.2",
+    "authors": [
+        {
+            "name": "Pablo de la Pena",
+            "email": "p@shedcollective.org",
+            "homepage": "http://shedcollective.org",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "hello@shedcollective.org"
+    }
 }

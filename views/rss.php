@@ -9,7 +9,7 @@
     >
     <channel>
         <title><?=htmlentities($blog->label)?></title>
-        <atom:link href="<?=site_url(app_setting('url', 'blog-' . $blog->id) . 'rss')?>" rel="self" type="application/rss+xml" />
+        <atom:link href="<?=site_url($blog->url . '/rss')?>" rel="self" type="application/rss+xml" />
         <link><?=site_url()?></link>
         <description><?=htmlentities($blog->description)?></description>
         <lastBuildDate>Sun, 13 Apr 2014 19:49:30 +0000</lastBuildDate>
@@ -25,7 +25,7 @@
             <item>
                 <title><?=htmlentities($post->title)?></title>
                 <link><?=$post->url?></link>
-                <guid isPermaLink="false"><?=site_url(app_setting('url', 'blog-' . $blog->id) . '?id=' . $post->id)?></guid>
+                <guid isPermaLink="false"><?=site_url($blog->url . '?id=' . $post->id)?></guid>
                 <?=app_setting('comments_enabled', 'blog-' . $blog->id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
                 <pubDate><?=date('r', strtotime($post->published))?></pubDate>
                 <dc:creator><![CDATA[<?=$post->author->first_name . ' ' . $post->author->last_name?>]]></dc:creator>
