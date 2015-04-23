@@ -27,7 +27,7 @@
         ?>
         <p class="alert alert-danger">
             <strong>Disqus is not configured correctly</strong>
-            <br />A shortname has not been specified for this website. Please create a shortname and define it in this site's <?anchor('admin/settings/blog', 'blog settings')?>.
+            <br />A shortname has not been specified for this website. Please create a shortname and define it in this site's <?anchor('admin/blog/settings', 'blog settings')?>.
         </p>
         <?php
     }
