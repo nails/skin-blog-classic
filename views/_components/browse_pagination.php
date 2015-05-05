@@ -22,7 +22,6 @@
 
         $config['base_url']    = $blog->url . '/tag/' . $tag->slug . '/';
         $config['uri_segment'] = 5;
-
     }
 
     $config['full_tag_open']    = '<li class="text-center"><ul class="pagination">';
