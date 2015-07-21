@@ -15,5 +15,9 @@
     ],
     "support": {
         "email": "hello@shedcollective.org"
-    }
+    },
+    "assets": [
+        "js/blog.skin.classic.min.js",
+        "css/styles.css"
+    ]
 }

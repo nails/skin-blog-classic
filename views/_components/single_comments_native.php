@@ -1,5 +1,5 @@
 <?php
 
     /**
-     * @todo Native comments
+     * @todo Native comments, handle expiring comments
      */

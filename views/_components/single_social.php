@@ -24,11 +24,20 @@
             break;
     }
 
+    if ($post->type === 'PHOTO') {
+
+        $iImageId = $post->photo->id;
+
+    } else {
+
+        $iImageId = null;
+    }
+
     $enabled   = array();
     $enabled[] = app_setting('social_facebook_enabled', 'blog-' . $blog->id) ? '<div class="facebook" title="Share link on Facebook">Facebook</div>' : '';
     $enabled[] = app_setting('social_twitter_enabled', 'blog-' . $blog->id) ? '<div class="twitter" ' . $twitterVia . ' title="Share link on Twitter">Twitter</div>' : '';
     $enabled[] = app_setting('social_googleplus_enabled', 'blog-' . $blog->id) ? '<div class="plusone" title="Share link on Google+">Google+</div>' : '';
-    $enabled[] = app_setting('social_pinterest_enabled', 'blog-' . $blog->id) && $post->image_id ? '<div class="pinterest" data-media="' . cdn_serve($post->image_id) . '" title="Share image on Pinterest">Pinterest</div>' : '';
+    $enabled[] = app_setting('social_pinterest_enabled', 'blog-' . $blog->id) && $iImageId ? '<div class="pinterest" data-media="' . cdn_serve($iImageId) . '" title="Share image on Pinterest">Pinterest</div>' : '';
 
     $enabled = array_filter($enabled);
 

@@ -8,10 +8,10 @@
     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
     >
     <channel>
-        <title><?=htmlentities($blog->label)?></title>
-        <atom:link href="<?=site_url($blog->url . '/rss')?>" rel="self" type="application/rss+xml" />
+        <title><?=htmlspecialchars($blog->label)?></title>
+        <atom:link href="<?=$blog->url . '/rss'?>" rel="self" type="application/rss+xml" />
         <link><?=site_url()?></link>
-        <description><?=htmlentities($blog->description)?></description>
+        <description><?=htmlspecialchars($blog->description)?></description>
         <lastBuildDate>Sun, 13 Apr 2014 19:49:30 +0000</lastBuildDate>
         <language>en-UK</language>
             <sy:updatePeriod>hourly</sy:updatePeriod>
@@ -23,23 +23,41 @@
 
             ?>
             <item>
-                <title><?=htmlentities($post->title)?></title>
+                <title><?=htmlspecialchars($post->title)?></title>
                 <link><?=$post->url?></link>
-                <guid isPermaLink="false"><?=site_url($blog->url . '?id=' . $post->id)?></guid>
+                <guid isPermaLink="false"><?=$blog->url . '?id=' . $post->id?></guid>
                 <?=app_setting('comments_enabled', 'blog-' . $blog->id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
                 <pubDate><?=date('r', strtotime($post->published))?></pubDate>
-                <dc:creator><![CDATA[<?=$post->author->first_name . ' ' . $post->author->last_name?>]]></dc:creator>
+                <dc:creator><?=htmlspecialchars($post->author->first_name . ' ' . $post->author->last_name)?></dc:creator>
                 <description><![CDATA[<?=$post->excerpt?>]]></description>
                 <content:encoded><![CDATA[<?php
 
-                    if ($post->image_id) :
+                    if ($post->type === 'PHOTO' && $post->photo->id) {
 
-                        echo '<p>' . img(cdn_serve($post->image_id)) . '</p<name />';
+                        echo '<p>' . img(cdn_serve($post->photo->id)) . '</p<name />';
 
-                    endif;
+                    } else if ($post->type === 'VIDEO' && $post->video->id) {
+
+                        switch ($post->video->type) {
+                            case 'YOUTUBE':
+                                echo '<iframe width="500" height="281" src="https://www.youtube.com/embed/' . $post->video->id . '" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                                break;
+
+                            case 'VIMEO':
+                                echo '<iframe src="https://player.vimeo.com/video/' . $post->video->id . '" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
+                                break;
+                        }
+
+                    } else if ($post->type === 'AUDIO' && $post->audio->id) {
+
+                        switch ($post->audio->type) {
+                            case 'SPOTIFY':
+                                echo '<iframe src="https://embed.spotify.com/?uri=spotify:track:' . $post->audio->id . '" width="500" height="80" frameborder="0" allowtransparency="true"></iframe>';
+                                break;
+                        }
+                    }
 
                     echo $post->body;
-
 
                 ?>]]></content:encoded>
             </item>

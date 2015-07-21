@@ -6,9 +6,17 @@
     // --------------------------------------------------------------------------
 
     //  Post Featured Image
-    if ($post->image_id) {
+    if ($post->type === 'PHOTO' && !empty($post->photo->id)) {
 
-        $this->load->view($skin->path . 'views/_components/single_featured_image');
+        $this->load->view($skin->path . 'views/_components/single_type_photo');
+
+    } else if ($post->type === 'VIDEO' && !empty($post->video->id)) {
+
+        $this->load->view($skin->path . 'views/_components/single_type_video');
+
+    } else if ($post->type === 'AUDIO' && !empty($post->audio->id)) {
+
+        $this->load->view($skin->path . 'views/_components/single_type_audio');
     }
 
     // --------------------------------------------------------------------------
@@ -61,7 +69,7 @@
     // --------------------------------------------------------------------------
 
     //  Post comments
-    if (app_setting('comments_enabled', 'blog-' . $blog->id)) {
+    if (app_setting('comments_enabled', 'blog-' . $blog->id) && $post->commentsEnabled) {
 
         $this->load->view($skin->path . 'views/_components/single_comments');
     }
