@@ -9,51 +9,47 @@
                     padding-bottom: 1em;
                     font-size: 0.9em;
                 }
+                .gallery {
+                    img {
+                        margin-bottom: 0;
+                    }
+                }
+                .body {
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        margin-top: 1.5em;
+                    }
+                    pre {
+                        &.code-block {
+                            margin: 1.75em 0;
+                            color: #C7254E;
+                        }
+                    }
+                    code {
+                        color: #C7254E;
+                    }
+                }
+                .categories,
+                .tags {
+                    margin-bottom: 0.5em;
+                    .badge {
+                        a {
+                            color: inherit;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
             }
         }
         .sidebar {
             .widget {
                 margin-bottom: 2em;
-            }
-        }
-    }
-    &.single {
-        .post {
-            .gallery {
-                img {
-                    margin-bottom: 0;
-                }
-            }
-            .body {
-                h1,
-                h2,
-                h3,
-                h4,
-                h5,
-                h6 {
-                    margin-top: 1.5em;
-                }
-                pre {
-                    &.code-block {
-                        margin: 1.75em 0;
-                        color: #C7254E;
-                    }
-                }
-                code {
-                    color: #C7254E;
-                }
-            }
-            .categories,
-            .tags {
-                margin-bottom: 0.5em;
-                .badge {
-                    a {
-                        color: inherit;
-                        &:hover {
-                            text-decoration: none;
-                        }
-                    }
-                }
             }
         }
     }
