@@ -1,24 +1,19 @@
 .nails-blog-skin-classic {
-    &.browse {
+    &.browse,
+    &.single {
         .posts {
             .post {
                 margin-bottom: 2.5em;
-                .title {
-                    margin-top: 0;
+                .date-author {
+                    margin-bottom: 1em;
+                    padding-bottom: 1em;
+                    font-size: 0.9em;
                 }
             }
         }
         .sidebar {
             .widget {
                 margin-bottom: 2em;
-                h3 {
-                    margin-top: 0;
-                }
-            }
-        }
-        .archive-title {
-            h3 {
-                margin-top: 0;
             }
         }
     }
@@ -27,6 +22,21 @@
             .gallery {
                 img {
                     margin-bottom: 0;
+                }
+            }
+            .body {
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-top: 1.5em;
+                }
+                pre {
+                    &.code-block {
+                        margin: 1.75em 0;
+                    }
                 }
             }
             .categories,
