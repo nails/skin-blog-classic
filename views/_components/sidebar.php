@@ -1,5 +1,5 @@
 <ul class="sidebar col-md-3 col-md-pull-9 list-unstyled">
-<?php
+    <?php
 
     if (app_setting('sidebar_latest_posts', 'blog-' . $blog->id) && !empty($widget->latest_posts)) {
 
@@ -141,5 +141,5 @@
         echo '<li>';
     }
 
-?>
+    ?>
 </ul>

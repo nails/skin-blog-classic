@@ -1,4 +1,4 @@
 <?php
 
-    echo $archive_description;
-    echo '<hr />';
+echo $archive_description;
+echo '<hr />';
