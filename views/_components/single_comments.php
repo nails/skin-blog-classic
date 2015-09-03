@@ -1,16 +1,16 @@
 <?php
 
-    switch (app_setting('comments_engine', 'blog-' . $blog->id)) {
+switch (app_setting('comments_engine', 'blog-' . $blog->id)) {
 
-        case 'NATIVE':
+    case 'NATIVE':
 
-            $this->load->view( $skin->path . 'views/_components/single_comments_native' );
-            break;
+        $skinLoadView('_components/single_comments_native');
+        break;
 
-        case 'DISQUS':
+    case 'DISQUS':
 
-            $this->load->view( $skin->path . 'views/_components/single_comments_disqus' );
-            break;
+        $skinLoadView('_components/single_comments_disqus');
+        break;
 
 
-    }
+}

@@ -1,3 +1,3 @@
 <?php
 
-    echo $post->body;
+echo $post->body;
