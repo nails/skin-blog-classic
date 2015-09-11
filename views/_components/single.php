@@ -68,6 +68,14 @@ if (!empty($post->associations)) {
 
 // --------------------------------------------------------------------------
 
+//  Post Siblings
+if (!empty($post->siblings->next) || !empty($post->siblings->prev)) {
+
+    $skinLoadView('_components/single_siblings');
+}
+
+// --------------------------------------------------------------------------
+
 //  Post comments
 if (app_setting('comments_enabled', 'blog-' . $blog->id) && $post->commentsEnabled) {
 

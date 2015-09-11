@@ -5,7 +5,7 @@
 
         echo '<li class="widget latest-posts clearfix">';
 
-            echo '<h3>Latest Posts</h3>';
+            echo '<h3>Latest ' . ucfirst($postNamePlural) . '</h3>';
             echo '<ul class="latest-posts">';
             foreach ($widget->latest_posts as $item) {
 
@@ -111,7 +111,7 @@
 
         echo '<li class="widget popular-posts clearfix">';
 
-            echo '<h3>Popular Posts</h3>';
+            echo '<h3>Popular ' . ucfirst($postNamePlural) . '</h3>';
             echo '<ul class="popular-posts">';
             foreach ($widget->popular_posts as $item) {
 
