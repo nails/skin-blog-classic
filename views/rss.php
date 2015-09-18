@@ -34,7 +34,7 @@
 
                     if ($post->type === 'PHOTO' && $post->photo->id) {
 
-                        echo '<p>' . img(cdn_serve($post->photo->id)) . '</p<name />';
+                        echo '<p>' . img(cdnServe($post->photo->id)) . '</p<name />';
 
                     } else if ($post->type === 'VIDEO' && $post->video->id) {
 
