@@ -77,7 +77,7 @@ if (!empty($post->siblings->next) || !empty($post->siblings->prev)) {
 // --------------------------------------------------------------------------
 
 //  Post comments
-if (app_setting('comments_enabled', 'blog-' . $blog->id) && $post->commentsEnabled) {
+if (app_setting('comments_enabled', 'blog-' . $blog->id) && $post->comments_enabled) {
 
     $skinLoadView('_components/single_comments');
 }
