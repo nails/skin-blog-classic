@@ -9,7 +9,6 @@
 
     echo '</ul>';
 
-    $this->load->view($skin->path . 'views/_components/sidebar');
     $skinLoadView('_components/sidebar');
 
     ?>
