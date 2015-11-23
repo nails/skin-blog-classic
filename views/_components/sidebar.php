@@ -1,7 +1,7 @@
 <ul class="sidebar col-md-3 col-md-pull-9 list-unstyled">
     <?php
 
-    if (app_setting('sidebar_latest_posts', 'blog-' . $blog->id) && !empty($widget->latest_posts)) {
+    if (appSetting('sidebar_latest_posts', 'blog-' . $blog->id) && !empty($widget->latest_posts)) {
 
         echo '<li class="widget latest-posts clearfix">';
 
@@ -25,7 +25,7 @@
 
     // --------------------------------------------------------------------------
 
-    if (app_setting('categories_enabled', 'blog-' . $blog->id) && appSetting('sidebar_categories', 'blog-' . $blog->id) && !empty($widget->categories)) {
+    if (appSetting('categories_enabled', 'blog-' . $blog->id) && appSetting('sidebar_categories', 'blog-' . $blog->id) && !empty($widget->categories)) {
 
         echo '<li class="widget categories clearfix">';
 
@@ -46,7 +46,7 @@
 
     // --------------------------------------------------------------------------
 
-    if (app_setting('tags_enabled', 'blog-' . $blog->id) && appSetting('sidebar_tags', 'blog-' . $blog->id) && !empty($widget->tags)) {
+    if (appSetting('tags_enabled', 'blog-' . $blog->id) && appSetting('sidebar_tags', 'blog-' . $blog->id) && !empty($widget->tags)) {
 
         echo '<li class="widget tags clearfix">';
 
@@ -72,7 +72,7 @@
 
         foreach ($post->associations as $assoc) {
 
-            if (app_setting('sidebar_association_' . $assoc->slug, 'blog-' . $blog->id) && !empty($assoc->current)) {
+            if (appSetting('sidebar_association_' . $assoc->slug, 'blog-' . $blog->id) && !empty($assoc->current)) {
 
                 echo '<li class="widget associations association-' . $assoc->slug . ' clearfix">';
                 echo '<h3>' . $assoc->widget->title . '</h3>';
@@ -107,7 +107,7 @@
     // --------------------------------------------------------------------------
 
     //  Popular posts
-    if (app_setting('sidebar_popular_posts', 'blog-' . $blog->id) && !empty($widget->popular_posts)) {
+    if (appSetting('sidebar_popular_posts', 'blog-' . $blog->id) && !empty($widget->popular_posts)) {
 
         echo '<li class="widget popular-posts clearfix">';
 
@@ -132,7 +132,7 @@
     // --------------------------------------------------------------------------
 
     //  RSS
-    if (app_setting('rss_enabled', 'blog-' . $blog->id)) {
+    if (appSetting('rss_enabled', 'blog-' . $blog->id)) {
 
         echo '<li class="text-center">';
             echo anchor(

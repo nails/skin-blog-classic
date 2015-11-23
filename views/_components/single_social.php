@@ -9,7 +9,7 @@ $twitterVia  = appSetting('social_twitter_via', 'blog-' . $blog->id) ? 'data-via
 // --------------------------------------------------------------------------
 
 //  Layout
-switch (app_setting('social_layout', 'blog-' . $blog->id)) {
+switch (appSetting('social_layout', 'blog-' . $blog->id)) {
 
     case 'HORIZONTAL':
         $layout = '';

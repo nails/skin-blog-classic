@@ -26,7 +26,7 @@
                 <title><?=htmlspecialchars($post->title)?></title>
                 <link><?=$post->url?></link>
                 <guid isPermaLink="false"><?=$blog->url . '?id=' . $post->id?></guid>
-                <?=app_setting('comments_enabled', 'blog-' . $blog->id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
+                <?=appSetting('comments_enabled', 'blog-' . $blog->id) ? '<comments>' . $post->url . '#comments</comments>' : ''?>
                 <pubDate><?=date('r', strtotime($post->published))?></pubDate>
                 <dc:creator><?=htmlspecialchars($post->author->first_name . ' ' . $post->author->last_name)?></dc:creator>
                 <description><![CDATA[<?=$post->excerpt?>]]></description>

@@ -35,7 +35,7 @@ $skinLoadView('_components/single_body');
 // --------------------------------------------------------------------------
 
 //  Post Social Tools
-if (app_setting('social_enabled', 'blog-' . $blog->id)) {
+if (appSetting('social_enabled', 'blog-' . $blog->id)) {
 
     $skinLoadView('_components/single_social');
 }
@@ -43,17 +43,17 @@ if (app_setting('social_enabled', 'blog-' . $blog->id)) {
 // --------------------------------------------------------------------------
 
 //  Categories & Tags
-if ((app_setting('categories_enabled', 'blog-' . $blog->id) && $post->categories) || (app_setting('tags_enabled', 'blog-' . $blog->id) && $post->tags)) {
+if ((appSetting('categories_enabled', 'blog-' . $blog->id) && $post->categories) || (appSetting('tags_enabled', 'blog-' . $blog->id) && $post->tags)) {
 
     echo '<hr />';
 }
 
-if (app_setting('categories_enabled', 'blog-' . $blog->id) && $post->categories) {
+if (appSetting('categories_enabled', 'blog-' . $blog->id) && $post->categories) {
 
     $skinLoadView('_components/single_categories');
 }
 
-if (app_setting('tags_enabled', 'blog-' . $blog->id) && $post->tags) {
+if (appSetting('tags_enabled', 'blog-' . $blog->id) && $post->tags) {
 
     $skinLoadView('_components/single_tags');
 }
@@ -77,7 +77,7 @@ if (!empty($post->siblings->next) || !empty($post->siblings->prev)) {
 // --------------------------------------------------------------------------
 
 //  Post comments
-if (app_setting('comments_enabled', 'blog-' . $blog->id) && $post->comments_enabled) {
+if (appSetting('comments_enabled', 'blog-' . $blog->id) && $post->comments_enabled) {
 
     $skinLoadView('_components/single_comments');
 }
