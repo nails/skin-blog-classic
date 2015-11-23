@@ -2,9 +2,9 @@
 
 //  Defaults
 $layout      = '';
-$singleTitle = app_setting('social_layout_single_text', 'blog-' . $blog->id) ? app_setting('social_layout_single_text', 'blog-' . $blog->id) : 'Share';
-$counters    = app_setting('social_counters', 'blog-' . $blog->id) ? 'data-zeroes="yes"' : 'data-counters="no"';
-$twitterVia  = app_setting('social_twitter_via', 'blog-' . $blog->id) ? 'data-via="' . app_setting('social_twitter_via', 'blog-' . $blog->id) . '"' : '';
+$singleTitle = appSetting('social_layout_single_text', 'blog-' . $blog->id) ? appSetting('social_layout_single_text', 'blog-' . $blog->id) : 'Share';
+$counters    = appSetting('social_counters', 'blog-' . $blog->id) ? 'data-zeroes="yes"' : 'data-counters="no"';
+$twitterVia  = appSetting('social_twitter_via', 'blog-' . $blog->id) ? 'data-via="' . appSetting('social_twitter_via', 'blog-' . $blog->id) . '"' : '';
 
 // --------------------------------------------------------------------------
 
@@ -34,10 +34,10 @@ if ($post->type === 'PHOTO') {
 }
 
 $enabled   = array();
-$enabled[] = app_setting('social_facebook_enabled', 'blog-' . $blog->id) ? '<div class="facebook" title="Share link on Facebook">Facebook</div>' : '';
-$enabled[] = app_setting('social_twitter_enabled', 'blog-' . $blog->id) ? '<div class="twitter" ' . $twitterVia . ' title="Share link on Twitter">Twitter</div>' : '';
-$enabled[] = app_setting('social_googleplus_enabled', 'blog-' . $blog->id) ? '<div class="plusone" title="Share link on Google+">Google+</div>' : '';
-$enabled[] = app_setting('social_pinterest_enabled', 'blog-' . $blog->id) && $iImageId ? '<div class="pinterest" data-media="' . cdnServe($iImageId) . '" title="Share image on Pinterest">Pinterest</div>' : '';
+$enabled[] = appSetting('social_facebook_enabled', 'blog-' . $blog->id) ? '<div class="facebook" title="Share link on Facebook">Facebook</div>' : '';
+$enabled[] = appSetting('social_twitter_enabled', 'blog-' . $blog->id) ? '<div class="twitter" ' . $twitterVia . ' title="Share link on Twitter">Twitter</div>' : '';
+$enabled[] = appSetting('social_googleplus_enabled', 'blog-' . $blog->id) ? '<div class="plusone" title="Share link on Google+">Google+</div>' : '';
+$enabled[] = appSetting('social_pinterest_enabled', 'blog-' . $blog->id) && $iImageId ? '<div class="pinterest" data-media="' . cdnServe($iImageId) . '" title="Share image on Pinterest">Pinterest</div>' : '';
 
 $enabled = array_filter($enabled);
 

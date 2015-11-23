@@ -25,7 +25,7 @@
 
     // --------------------------------------------------------------------------
 
-    if (app_setting('categories_enabled', 'blog-' . $blog->id) && app_setting('sidebar_categories', 'blog-' . $blog->id) && !empty($widget->categories)) {
+    if (app_setting('categories_enabled', 'blog-' . $blog->id) && appSetting('sidebar_categories', 'blog-' . $blog->id) && !empty($widget->categories)) {
 
         echo '<li class="widget categories clearfix">';
 
@@ -46,7 +46,7 @@
 
     // --------------------------------------------------------------------------
 
-    if (app_setting('tags_enabled', 'blog-' . $blog->id) && app_setting('sidebar_tags', 'blog-' . $blog->id) && !empty($widget->tags)) {
+    if (app_setting('tags_enabled', 'blog-' . $blog->id) && appSetting('sidebar_tags', 'blog-' . $blog->id) && !empty($widget->tags)) {
 
         echo '<li class="widget tags clearfix">';
 
