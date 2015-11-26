@@ -1,4 +1,4 @@
-<div class="nails-blog-skin-classic single row">
+<div class="nails-skin-blog-classic single row">
     <?php
 
     echo '<ul class="posts col-md-9 col-md-push-3 list-unstyled">';

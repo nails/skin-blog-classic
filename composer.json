@@ -27,7 +27,14 @@
         "nails" :
         {
             "type": "skin",
-            "forModule": "nailsapp/module-blog"
+            "forModule": "nailsapp/module-blog",
+            "data": {
+                "Classic Skin",
+                "assets": [
+                    "js/blog.skin.classic.min.js",
+                    "css/styles.css"
+                ]
+            }
         }
     }
 }

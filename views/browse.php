@@ -1,4 +1,4 @@
-<div class="nails-blog-skin-classic browse<?=!empty($archive_title) ? ' archive' : ' non-archive'?> row">
+<div class="nails-skin-blog-classic browse<?=!empty($archive_title) ? ' archive' : ' non-archive'?> row">
     <?php
 
     echo '<ul class="posts col-md-9 col-md-push-3 list-unstyled">';
