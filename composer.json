@@ -29,7 +29,7 @@
             "type": "skin",
             "forModule": "nailsapp/module-blog",
             "data": {
-                "Classic Skin",
+                "name": "Classic Skin",
                 "assets": [
                     "js/blog.skin.classic.min.js",
                     "css/styles.css"
