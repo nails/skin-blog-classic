@@ -26,10 +26,10 @@
     {
         "nails" :
         {
+            "name": "Classic Skin",
             "type": "skin",
             "forModule": "nailsapp/module-blog",
             "data": {
-                "name": "Classic Skin",
                 "assets": [
                     "js/blog.skin.classic.min.js",
                     "css/styles.css"
