@@ -27,7 +27,7 @@
         "nails" :
         {
             "type": "skin",
-            "subType": "blog"
+            "forModule": "nailsapp/module-blog"
         }
     }
 }
