@@ -27,8 +27,8 @@ foreach ($post->associations as $index => $assoc) {
 
                                 $out = call_user_func(
                                     $assoc->widget->callback,
-                                    $current->id,
-                                    $current->label,
+                                    !empty($current->associated_id) ? $current->associated_id : null,
+                                    !empty($current->label) ? $current->label : null,
                                     $item_index
                                 );
 
