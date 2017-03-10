@@ -24,7 +24,7 @@ if ($shortname) {
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
     <?php
 
-} elseif ($this->user_model->isAdmin()) {
+} elseif (isAdmin()) {
 
     ?>
     <p class="alert alert-danger">
