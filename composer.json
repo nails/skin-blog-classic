@@ -33,7 +33,14 @@
                 "assets": [
                     "js/blog.skin.classic.min.js",
                     "css/styles.css"
-                ]
+                ],
+                "nailsapp/module-cdn": {
+                    "permitted-image-dimensions": [
+                        "300x300",
+                        "500x500",
+                        "1000x1000"
+                    ]
+                }
             }
         }
     }
