@@ -10,12 +10,12 @@
     <channel>
         <title><?=htmlspecialchars($blog->label)?></title>
         <atom:link href="<?=$blog->url . '/rss'?>" rel="self" type="application/rss+xml" />
-        <link><?=site_url()?></link>
+        <link><?=siteUrl()?></link>
         <description><?=htmlspecialchars($blog->description)?></description>
         <lastBuildDate>Sun, 13 Apr 2014 19:49:30 +0000</lastBuildDate>
         <language>en-UK</language>
-            <sy:updatePeriod>hourly</sy:updatePeriod>
-            <sy:updateFrequency>1</sy:updateFrequency>
+        <sy:updatePeriod>hourly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
         <generator>http://nailsapp.co.uk</generator>
         <?php
 
