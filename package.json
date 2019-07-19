@@ -1,0 +1,23 @@
+{
+    "name": "nails-skin-blog-classic",
+    "description": "This is the classic skin for the Nails blog module.",
+    "author": "Nails Dev Team <hello@nailsapp.co.uk>",
+    "analyze": true,
+    "license": "MIT",
+    "repository": "https://github.com/nails/module/blog/skin/classic",
+    "devDependencies": {
+        "css-loader": "^3.0.0",
+        "autoprefixer": "^9.6.1",
+        "mini-css-extract-plugin": "^0.7.0",
+        "node-sass": "^4.12.0",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^7.1.0",
+        "webpack": "^4.35.3",
+        "webpack-command": "^0.4.2"
+    },
+    "scripts": {
+        "build": "webpack -p",
+        "build-dev": "webpack",
+        "watch": "webpack --watch"
+    }
+}

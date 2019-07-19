@@ -32,7 +32,7 @@
             "data": {
                 "assets": [
                     "js/blog.skin.classic.min.js",
-                    "css/styles.css"
+                    "css/blog.skin.classic.min.css"
                 ],
                 "nails/module-cdn": {
                     "permitted-image-dimensions": [
