@@ -1,6 +1,6 @@
 <?php
 
-$this->load->library('pagination');
+get_instance()->load->library('pagination');
 
 $config                     = array();
 $config['total_rows']       = $pagination->total;
