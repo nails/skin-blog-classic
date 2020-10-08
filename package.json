@@ -6,14 +6,14 @@
     "license": "MIT",
     "repository": "https://github.com/nails/module/blog/skin/classic",
     "devDependencies": {
-        "autoprefixer": "^9.6.1",
-        "css-loader": "^3.0.0",
-        "mini-css-extract-plugin": "^0.7.0",
-        "node-sass": "^4.12.0",
-        "postcss-loader": "^3.0.0",
-        "sass-loader": "^7.1.0",
-        "webpack": "^4.35.3",
-        "webpack-command": "^0.4.2"
+        "autoprefixer": "^9.6",
+        "css-loader": "^4.3",
+        "mini-css-extract-plugin": "^0.12",
+        "node-sass": "^4.12",
+        "postcss-loader": "^4.0",
+        "sass-loader": "^10.0",
+        "webpack": "^4.35",
+        "webpack-command": "^0.5"
     },
     "scripts": {
         "build": "webpack -p",
